@@ -25,3 +25,8 @@
   max-width: 75%;
   height: auto;
 }
+
+.blog-link-img {
+  max-width: 15em;
+  height: auto;
+}
