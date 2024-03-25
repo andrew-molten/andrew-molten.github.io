@@ -1,3 +1,27 @@
-.red {
-  color: red;
+.container {
+  margin: 2em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.col-img {
+  align-items: center;
+}
+
+.small-img {
+  max-width: 75%;
+  height: auto;
 }
