@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .container {
   margin: 2em;
 }
@@ -17,7 +21,7 @@
   margin-bottom: 2em;
 }
 
-.col-img {
+.col-centre {
   align-items: center;
 }
 
@@ -26,7 +30,16 @@
   height: auto;
 }
 
+.blog-link-card {
+  text-align: center;
+  font-size: large;
+  background-color: bisque;
+  width: fit-content;
+  border-radius: 2em 2em 1em 1em;
+}
+
 .blog-link-img {
   max-width: 15em;
   height: auto;
+  border-radius: 2em 2em 0 0;
 }
