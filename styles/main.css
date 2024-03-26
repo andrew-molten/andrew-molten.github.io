@@ -2,6 +2,14 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0.5em;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+}
+
 .container {
   margin: 2em;
 }
