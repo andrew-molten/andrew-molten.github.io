@@ -43,3 +43,15 @@ a {
   height: auto;
   border-radius: 2em 2em 0 0;
 }
+
+.indent {
+  margin-left: 1em;
+}
+
+.jump-button {
+  padding: 0.25em;
+  background-color: #079fdb;
+  border-radius: 1.3em;
+  margin-left: 2em;
+  color: rgb(255, 255, 255);
+}
