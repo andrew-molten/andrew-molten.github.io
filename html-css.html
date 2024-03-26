@@ -39,9 +39,7 @@
         </li>
         <li>
           Absolute - will position itself relative to the nearest parent element
-          which also has an absolute or relative positioning, if no such parent
-          element exists then it will default to be relative to the top of the
-          html document.
+          which also has an absolute or relative positioning.
         </li>
         <li>
           Fixed - will be positioned relative to the viewport (screen). If an
@@ -89,6 +87,69 @@
         An absolute element allows you to position it absolutely anywhere you
         want to on the page.
       </p>
+
+      <p>
+        It will sit at a specified position within a parent element that is
+        positioned relative or absolutely. If no such parent element exists,
+        then its parameters will position it relative to the whole page, but
+        strangely without parameters it will still sit within its parent
+        element.
+      </p>
+
+      <p>
+        As you can see below in the first example, the blue absolutely
+        positioned box inside the red relatively positioned box is sitting in
+        the top left corner because it hasn’t been given any parameters. If the
+        red box was still set to position: static; it actually wouldn’t change a
+        thing right now.
+      </p>
+
+      <div class="relative-no-params red-box">
+        <div class="blue-box" id="absolute-no-params"></div>
+      </div>
+
+      <p>
+        And in the next example the property left: 25%; has moved the blue
+        square away from the left by 25%. While the property top: 50%; has been
+        used to shift it away from the top by 50%.
+      </p>
+
+      <div class="relative-no-params red-box">
+        <div class="blue-box" id="absolute-params"></div>
+      </div>
+
+      <p>
+        I want to show one more example because I have found this concept very
+        confusing in the past. While you might think that simply giving it the
+        properties left: 50%; top: 50%; would center the blue box inside the red
+        box, it does not. It moves the left side of the box to the horizontal
+        50% mark of the red box, and the top of the blue box to the vertical 50%
+        mark of the red box.
+      </p>
+
+      <div class="relative-no-params red-box">
+        <div class="blue-box" id="absolute-fifty"></div>
+      </div>
+
+      <p>
+        And while in this example you could just use the value 25% to center it
+        because the blue box is exactly 50% the size of the red box, that would
+        make things very confusing later when you try to center an element
+        absolutely which has odd proportions compared to its parent.
+      </p>
+      <p>
+        To solve this you need to add the property transform: translate(-50%,
+        -50%); which will shift the blue box -50% of its own size, along the X &
+        Y axis. Essentially finding its center. This has taken me a long time to
+        wrap my head around, and it wasn’t until writing this blog post that I
+        got it. So if that’s too much for you right now, then not a worry, take
+        some time to play around with these properties by themselves and it will
+        eventually make sense.
+      </p>
+
+      <div class="relative-no-params red-box">
+        <div class="blue-box" id="absolute-translate"></div>
+      </div>
 
       <p>
         While this is a very powerful property, it’s also important to remember

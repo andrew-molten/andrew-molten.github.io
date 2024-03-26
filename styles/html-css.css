@@ -4,6 +4,12 @@
   width: 200px;
 }
 
+.blue-box {
+  background-color: blue;
+  height: 50px;
+  width: 100px;
+}
+
 #relative-no-params {
   position: relative;
 }
@@ -12,4 +18,31 @@
   position: relative;
   top: 30px;
   left: 25%;
+}
+
+.relative-no-params {
+  position: relative;
+}
+
+#absolute-params {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+}
+
+#absolute-fifty {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+#absolute-translate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#absolute-no-params {
+  position: absolute;
 }
