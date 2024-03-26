@@ -33,8 +33,7 @@ a {
 .column {
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+  flex: 50%;
   justify-content: center;
   margin-bottom: 2em;
 }
@@ -53,6 +52,7 @@ a {
   font-size: large;
   background-color: bisque;
   width: fit-content;
+  margin-top: 1em;
   border-radius: 2em 2em 1em 1em;
 }
 
@@ -72,4 +72,16 @@ a {
   border-radius: 1.3em;
   margin-left: 2em;
   color: rgb(255, 255, 255);
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 100%;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
 }
