@@ -1,0 +1,15 @@
+.red-box {
+  background-color: red;
+  height: 100px;
+  width: 200px;
+}
+
+#relative-no-params {
+  position: relative;
+}
+
+#relative-params {
+  position: relative;
+  top: 30px;
+  left: 25%;
+}

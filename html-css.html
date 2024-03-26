@@ -60,10 +60,42 @@
         positions.
       </p>
       <h3>Relative</h3>
-      <p></p>
+      <p>
+        An element with this property may move relative to its default static
+        position. But if set to relative without any additional parameters then
+        it will just appear in its default position:
+      </p>
+      <div class="red-box" id="relative-no-params">
+        <p>No parameters</p>
+      </div>
+
+      <p>
+        You can add the parameters top, right, bottom, left, which will then
+        move the element said amount away from that side i.e. top: 30px will
+        move the box 30px down (away from the top), from where it would have
+        been positioned to by default. Or left: 25% will move it 25% away from
+        the left of where it would default to:
+      </p>
+
+      <div class="container">
+        <div class="red-box" id="relative-params">
+          <p>top: 30px</p>
+          <p>left: 30px</p>
+        </div>
+      </div>
 
       <h3>Absolute</h3>
-      <p></p>
+      <p>
+        An absolute element allows you to position it absolutely anywhere you
+        want to on the page.
+      </p>
+
+      <p>
+        While this is a very powerful property, it’s also important to remember
+        the side effects of using it. When an element is positioned absolutely
+        it removes it from the flow of the page, therefore it cannot affect
+        other elements, and other elements cannot affect it.
+      </p>
 
       <h3>Fixed</h3>
       <p></p>
