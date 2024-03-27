@@ -159,7 +159,31 @@
       </p>
 
       <h3>Fixed</h3>
-      <p></p>
+
+      <p>
+        If an element is fixed then it will be fixed to the specified parameters
+        of your screen as you scroll or whatever you do.
+      </p>
+      <p>
+        I’ve illustrated this with the green line at the bottom of the screen
+        which is hovering 2px from the bottom of the screen.
+      </p>
+      <p>
+        The same parameters can be used with fixed: top, left, bottom, right.
+        But in this case they position the element from said parameter of the
+        viewport (screen). This can be handy if you want the navigation to stay
+        at the top of the screen as users scroll, if you want to have a chat
+        bubble in a corner of the screen, or something like an accessibility
+        toolbar on the screen at all times.
+      </p>
+      <p>
+        The biggest thing to keep in mind if you are using the fixed position is
+        can interfere with content on your page by making parts of your page
+        unreadable/unclickable. So do think about what effect this will have on
+        your page, and this is where testing in multiple views will become
+        important i.e. desktop, mobile, tablet.
+      </p>
     </div>
+    <div class="green-line" id="fixed"></div>
   </body>
 </html>
