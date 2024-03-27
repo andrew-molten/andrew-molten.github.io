@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(67, 67, 67);
+}
+
 a {
   text-decoration: none;
 }
@@ -11,7 +15,9 @@ h3 {
 }
 
 .container {
-  margin: 2em;
+  background-color: #fffcf8;
+  padding: 1.5em;
+  margin: 4em;
 }
 
 .sea-edge {
@@ -91,5 +97,9 @@ h3 {
     flex: 100%;
     justify-content: center;
     margin-bottom: 2em;
+  }
+
+  .container {
+    margin: 0.5em;
   }
 }
