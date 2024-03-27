@@ -105,11 +105,3 @@ h3 {
     margin: 0.5em;
   }
 }
-
-.css-position-property {
-  position: static;
-  position: relative;
-  position: absolute;
-  position: fixed;
-  position: sticky;
-}
