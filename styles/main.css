@@ -40,29 +40,23 @@ h3 {
   left: 10%;
 }
 
-/* .image-cropper {
-  position: absolute;
-  height: 200px;
-  width: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-} */
-
-#heading-profile {
-  position: absolute;
-  top: 50%;
-  right: 10%;
-  transform: translateY(-50%);
+.image-cropper {
   height: 120px;
   width: 120px;
   border-radius: 100%;
   overflow: hidden;
 }
 
+#heading-profile {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+}
+
 #profile-pic {
   width: 100%;
   height: auto;
-  /* display: inline; */
   margin: 0 auto;
   margin-top: -25%;
 }
