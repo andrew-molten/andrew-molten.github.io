@@ -40,6 +40,33 @@ h3 {
   left: 10%;
 }
 
+/* .image-cropper {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+} */
+
+#heading-profile {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+#profile-pic {
+  width: 100%;
+  height: auto;
+  /* display: inline; */
+  margin: 0 auto;
+  margin-top: -25%;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -93,6 +120,20 @@ h3 {
 @media (max-width: 600px) {
   .row {
     flex-direction: column;
+  }
+
+  .heading-container {
+    text-align: left;
+  }
+
+  .heading {
+    top: 0;
+    width: 50%;
+  }
+
+  #heading-profile {
+    height: 100px;
+    width: 100px;
   }
 
   .column {
