@@ -38,7 +38,12 @@ h3 {
 .heading {
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 5%;
+}
+
+.blog-title {
+  margin: 0 0 0 8%;
+  color: #fdf8f1;
 }
 
 .image-cropper {
@@ -60,11 +65,6 @@ h3 {
   height: auto;
   margin: 0 auto;
   margin-top: -25%;
-}
-
-.blog-title {
-  margin: 0 0 0 2em;
-  color: #fdf8f1;
 }
 
 .row {
@@ -129,6 +129,10 @@ h3 {
   .heading {
     top: 0;
     width: 50%;
+  }
+
+  .blog-title {
+    margin-left: 0.5em;
   }
 
   #heading-profile {
