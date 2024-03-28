@@ -19,7 +19,7 @@ h3 {
 .container {
   background-color: #fffcf8;
   padding: 1.5em;
-  margin: 4em;
+  margin: 1em 10% 10% 10%;
 }
 
 .sea-edge {
@@ -60,6 +60,11 @@ h3 {
   height: auto;
   margin: 0 auto;
   margin-top: -25%;
+}
+
+.blog-title {
+  margin: 0 0 0 2em;
+  color: #fdf8f1;
 }
 
 .row {
@@ -139,5 +144,11 @@ h3 {
 
   .container {
     margin: 0.5em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 1em 20% 20% 20%;
   }
 }
