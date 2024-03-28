@@ -32,19 +32,19 @@
           just appears in the order that it appears in the code.
         </li>
         <li>
-          <strong>Relative</strong> - will adjust its position on screen
-          relative to where it would normally appear, once given the parameters
-          to do so.
+          <a href="#relative-heading"><strong>Relative</strong></a> - will
+          adjust its position on screen relative to where it would normally
+          appear, once given the parameters to do so.
         </li>
         <li>
-          <strong>Absolute</strong> - will position itself in a specified
-          position within the nearest parent element which also has an absolute
-          or relative positioning.
+          <a href="#absolute-heading"><strong>Absolute</strong></a> - will
+          position itself in a specified position within the nearest parent
+          element which also has an absolute or relative positioning.
         </li>
         <li>
-          <strong>Fixed</strong> - will fix an element to position in the
-          viewport (screen) and will stay in the same position even as you
-          scroll.
+          <a href="#fixed-heading"><strong>Fixed</strong></a> - will fix an
+          element to position in the viewport (screen) and will stay in the same
+          position even as you scroll.
         </li>
         <li>
           <strong>Sticky</strong> - similar to fixed, except this element can
@@ -53,12 +53,12 @@
         </li>
       </ul>
 
-      <h2>Lets focus on the Relative, Absolute & Fixed positions.</h2>
-      <h2>Relative</h2>
+      <h2>Let's focus on the Relative, Absolute & Fixed positions.</h2>
+      <h2 id="relative-heading">Relative</h2>
       <p>
-        An element with this property may move relative to its default static
-        position. But if set to relative without any additional parameters then
-        it will just appear in its default position:
+        An element with this property may move relative to its normal default
+        position. If set to relative without any additional parameters then it
+        will just appear in its default position:
       </p>
       <img src="images/html-css/relative-no-params.jpg" />
       <div class="red-box" id="relative-no-params">
@@ -66,11 +66,13 @@
       </div>
 
       <p>
-        You can add the parameters top, right, bottom, left, which will then
-        move the element said amount away from that side i.e. top: 30px will
-        move the box 30px down (away from the top), from where it would have
-        been positioned to by default. Or left: 25% will move it 25% away from
-        the left of where it would default to:
+        You can add the parameters top, right, bottom, left, which will move the
+        element the specified amount
+        <strong class="slightly-bigger-text">away</strong> from that side i.e.
+        <em>"top: 30px"</em> will move the box <em>30px</em> down from where it
+        would have appeared by default. <em>"left: 25%"</em> will move it
+        <em>25% of it's parent element (the white container)</em> away from the
+        left side of where it would have appeared by default:
       </p>
 
       <img src="images/html-css/relative-params.jpg" />
@@ -79,50 +81,83 @@
         <p>left: 25%</p>
       </div>
 
-      <h2>Absolute</h2>
+      <h2 class="margin-top-2" id="absolute-heading">Absolute</h2>
       <p>
         An absolute element allows you to position it absolutely anywhere you
         want to on the page.
       </p>
 
       <p>
-        It will sit at a specified position within a parent element that is
-        positioned relative or absolutely. If no such parent element exists,
-        then its parameters will position it relative to the whole page, but
-        strangely without parameters it will still sit within its parent
-        element.
+        It will sit at a specified position within it's nearest parent element
+        that has
+        <em>"position: relative"</em> or <em>"position: absolute"</em>. If no
+        such parent element exists, then it will use the whole document as it's
+        nearest parent/point of reference.
       </p>
 
       <p>
-        As you can see below in the first example, the blue absolutely
-        positioned box inside the red relatively positioned box is sitting in
-        the top left corner because it hasn’t been given any parameters. If the
-        red box was still set to position: static; it actually wouldn’t change a
-        thing right now.
+        Strangely without parameters it will still sit within its parent element
+        whatever the parent elements position.
       </p>
-      <img src="images/html-css/absolute-no-params.jpg" />
-      <div class="relative-no-params red-box">
-        <div class="blue-box" id="absolute-no-params"></div>
+
+      <p>
+        See below, the blue box is absolutely positioned inside of the red box
+        which has <em>"position: relative"</em>. It's sitting in the top left
+        corner because it has no extra parameters.
+      </p>
+      <div class="row">
+        <div class="column align-left">
+          <img src="images/html-css/absolute-no-params.jpg" />
+          <div class="red-box relative-no-params margin-top-sml">
+            <div class="blue-box" id="absolute-no-params"></div>
+          </div>
+        </div>
+        <div class="column">
+          <p>
+            <em
+              >Use the dev tools (ctrl+shift+i) to see what happens when you
+              turn off the relative position of the red-box</em
+            >
+          </p>
+        </div>
       </div>
 
       <p>
-        And in the next example the property left: 25%; has moved the blue
-        square away from the left by 25%. While the property top: 50%; has been
-        used to shift it away from the top by 50%.
+        And here, the <strong><em>"property left: 25%;"</em></strong> moves the
+        blue square <strong>away from the left</strong> by 25% of it's parents
+        element (the red square). While the property
+        <strong><em>top: 50%;</em></strong> shifts it away from the top by
+        <em>50% of the parent element</em>.
       </p>
 
-      <img src="images/html-css/absolute-params.jpg" />
-      <div class="relative-no-params red-box">
-        <div class="blue-box" id="absolute-params"></div>
+      <div class="row">
+        <div class="column align-left">
+          <img src="images/html-css/absolute-params.jpg" />
+          <div class="relative-no-params red-box margin-top-sml">
+            <div class="blue-box" id="absolute-params"></div>
+          </div>
+        </div>
+        <div class="column col-centre">
+          <p>
+            <em
+              >Inspect the blue-box with Dev tools & play with the top & left
+              properties. What happens when you use a negative number?</em
+            >
+          </p>
+        </div>
       </div>
 
       <p>
-        I want to show one more example because I have found this concept very
-        confusing in the past. While you might think that simply giving it the
-        properties left: 50%; top: 50%; would center the blue box inside the red
-        box, it does not. It moves the left side of the box to the horizontal
-        50% mark of the red box, and the top of the blue box to the vertical 50%
-        mark of the red box.
+        I've found this concept very confusing in the past. While you might
+        think that giving an absolutely positioned element the properties
+        <strong><em>"left: 50%; top: 50%;"</em></strong> would center the blue
+        box inside the red box, it does not.
+      </p>
+      <p>
+        It shifts <strong>the left side of the box</strong> to the
+        <strong>horizontal 50% point of the red box</strong>, and the
+        <strong>top side of the blue box</strong> to the
+        <strong>50% point of the red box.</strong>
       </p>
 
       <img src="images/html-css/absolute-fifty.jpg" />
@@ -158,7 +193,7 @@
         other elements, and other elements cannot affect it.
       </p>
 
-      <h2>Fixed</h2>
+      <h2 id="fixed-heading">Fixed</h2>
 
       <p>
         If an element is fixed then it will be fixed to the specified parameters
