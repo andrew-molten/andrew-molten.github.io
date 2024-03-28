@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>blog-post-template</title>
+  </head>
+  <body>
+    <div class="heading-container">
+      <a href="index.html">
+        <img
+          src="images/sea-edge.png"
+          class="sea-edge"
+          alt="abstract colorful triangles"
+        />
+        <h1 class="heading">Andrew Molten's Blog</h1>
+        <div class="image-cropper" id="heading-profile">
+          <img id="profile-pic" src="images/Andrew.jpg" />
+        </div>
+      </a>
+    </div>
+    <h1 class="blog-title">Blog Post Template</h1>
+
+    <div class="container">
+      <h2>1st heading</h2>
+
+      <p>This is some test content</p>
+    </div>
+  </body>
+</html>
