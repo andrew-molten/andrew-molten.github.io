@@ -138,13 +138,12 @@ img {
 
 .jump-button {
   position: relative;
-  padding: 0.25em 0.75em 0.25em 0.75em;
-  margin-left: 2em;
+  padding: 0.5em 0.75em 0.5em 0.75em;
   background-color: #079fdb;
-  border-radius: 1.3em;
+  border-radius: 0.8em;
   margin-left: 2em;
-  color: #fffcf8;
-  overflow: hidden;
+  color: #fff7e5;
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
