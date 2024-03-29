@@ -166,58 +166,71 @@
       </div>
 
       <p>
-        And while in this example you could just use the value 25% to center it
-        because the blue box is exactly 50% the size of the red box, that would
-        make things very confusing later when you try to center an element
-        absolutely which has odd proportions compared to its parent.
+        While in that example you could use <em>"position: 25%;"</em> to center
+        it since the blue box is exactly half the size of the red box, that
+        would actually make things very confusing later when you try to use
+        absolute positioning to center an element which has proportions at odds
+        to its parent.
       </p>
       <p>
-        To solve this you need to add the property transform: translate(-50%,
-        -50%); which will shift the blue box -50% of its own size, along the X &
-        Y axis. Essentially finding its center. This has taken me a long time to
-        wrap my head around, and it wasn’t until writing this blog post that I
-        got it. So if that’s too much for you right now, then not a worry, take
-        some time to play around with these properties by themselves and it will
-        eventually make sense.
+        So to solve this, you can center the blue box by adding the property
+        <em>"transform: translate(-50%,-50%);"</em> which shifts the blue box
+        along the X & Y axis by <em>"-50% of its own size"</em>.This took me a
+        long time to get my head around, and it wasn’t until writing this blog
+        post that it clicked.
       </p>
 
-      <img src="images/html-css/absolute-translate.jpg" />
-      <div class="relative-no-params red-box">
-        <div class="blue-box" id="absolute-translate"></div>
+      <div class="row">
+        <div class="column align-left">
+          <img src="images/html-css/absolute-translate.jpg" />
+          <div class="relative-no-params red-box margin-top-sml">
+            <div class="blue-box" id="absolute-translate"></div>
+          </div>
+        </div>
+        <div class="column">
+          <p>
+            <em>
+              Play around with the translate properties in your DevTools. Turn
+              it off and on, try out different percentages, pixels and
+              substitute 0 in for one of the values.
+            </em>
+          </p>
+        </div>
       </div>
 
       <p>
-        While this is a very powerful property, it’s also important to remember
-        the side effects of using it. When an element is positioned absolutely
-        it removes it from the flow of the page, therefore it cannot affect
+        Absolute is a powerful property, but it’s important to remember that
+        when an element has <em>"position: absolute;"</em>
+        it's removesd from the flow of the document, therefore it cannot affect
         other elements, and other elements cannot affect it.
       </p>
 
       <h2 id="fixed-heading">Fixed</h2>
 
       <p>
-        If an element is fixed then it will be fixed to the specified parameters
-        of your screen as you scroll or whatever you do.
+        If an element is fixed then it will be fixed in a specified position on
+        your screen, even as you scroll.
       </p>
       <p>
-        I’ve illustrated this with the green line at the bottom of the screen
-        which is hovering 2px from the bottom of the screen.
+        I’ve illustrated this with the thin green line which is hovering 2px
+        from the bottom of your screen.
       </p>
       <img src="images/html-css/fixed.jpg" />
       <p>
-        The same parameters can be used with fixed: top, left, bottom, right.
-        But in this case they position the element from said parameter of the
-        viewport (screen). This can be handy if you want the navigation to stay
-        at the top of the screen as users scroll, if you want to have a chat
-        bubble in a corner of the screen, or something like an accessibility
-        toolbar on the screen at all times.
+        Fixed accepts the same parameters as relative & absoulute (top, bottom,
+        left, right). But in this case they position the element a specified
+        amount away from the edges of the viewport (screen). This is handy if
+        you want the navigation to stay at the top of the screen as users
+        scroll, if you want to have a chat bubble in a corner of the screen, or
+        something like an accessibility toolbar on the side of the screen at all
+        times.
       </p>
       <p>
-        The biggest thing to keep in mind if you are using the fixed position is
-        can interfere with content on your page by making parts of your page
-        unreadable/unclickable. So do think about what effect this will have on
-        your page, and this is where testing in multiple views will become
-        important i.e. desktop, mobile, tablet.
+        The biggest thing to keep in mind when using
+        <em>"position: fixed;"</em> is hat it can interfere with content on your
+        page generally by obscuring it, but sometimes content can also appear
+        over top of your fixed element. So do make sure to test in multiple
+        views( desktop, mobile, tablet) to ensure there isn't any interference.
       </p>
     </div>
     <div class="green-line" id="fixed"></div>
