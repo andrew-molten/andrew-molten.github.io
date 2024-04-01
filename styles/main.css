@@ -85,7 +85,6 @@ img {
   display: flex;
   flex-direction: column;
   flex: 50%;
-  /* justify-content: center; */
   margin-bottom: 2em;
 }
 
@@ -96,6 +95,10 @@ img {
 
 .col-centre {
   align-items: center;
+}
+
+.col-centre-vert {
+  justify-content: center;
 }
 
 .small-img {
