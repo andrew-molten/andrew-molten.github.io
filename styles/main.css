@@ -24,6 +24,10 @@ img {
   margin: auto;
 }
 
+.p-link {
+  color: rgb(0, 72, 255);
+}
+
 .container {
   background-color: #fffcf8;
   padding: 1.5em;
