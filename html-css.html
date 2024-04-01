@@ -74,8 +74,26 @@
         <em>25% of it's parent element (the white container)</em> away from the
         left side of where it would have appeared by default:
       </p>
+      <p>
+        Something else to keep in mind with relative positioning, is that the
+        rest of the document will carry on as normal - as though your relatively
+        positioned element is still in its original position.
+      </p>
 
-      <img src="images/html-css/relative-params.jpg" />
+      <div class="row">
+        <div class="column">
+          <img src="images/html-css/relative-params.jpg" />
+        </div>
+        <div class="column col-centre-vert">
+          <p>
+            <em
+              >Use your DevTools (ctrl+shift+i or right click the red box &
+              inspect) to change the top value to 200px, how does that affect
+              the rest of the document?
+            </em>
+          </p>
+        </div>
+      </div>
       <div class="red-box" id="relative-params">
         <p>top: 30px</p>
         <p>left: 25%</p>
@@ -115,8 +133,8 @@
         <div class="column col-centre-vert">
           <p>
             <em
-              >Use the dev tools (ctrl+shift+i) to see what happens when you
-              turn off the relative position of the red-box</em
+              >Use the DevTools to see what happens when you turn off the
+              relative position of the red-box</em
             >
           </p>
         </div>
@@ -140,7 +158,7 @@
         <div class="column col-centre col-centre-vert">
           <p>
             <em
-              >Inspect the blue-box with Dev tools & play with the top & left
+              >Inspect the blue-box with DevTools & play with the top & left
               properties. What happens when you use a negative number?</em
             >
           </p>
