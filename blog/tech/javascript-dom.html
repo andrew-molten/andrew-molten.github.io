@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles/main.css" />
+    <title>blog-post-template</title>
+  </head>
+  <body>
+    <div class="heading-container">
+      <a href="../../index.html">
+        <img
+          src="../../images/sea-edge.png"
+          class="sea-edge"
+          alt="abstract colorful triangles"
+        />
+        <h1 class="heading">Andrew Molten's Blog</h1>
+        <div class="image-cropper" id="heading-profile">
+          <img id="profile-pic" src="../../images/Andrew.jpg" />
+        </div>
+      </a>
+    </div>
+    <h1 class="blog-title">Blog Post Template</h1>
+
+    <div class="container">
+      <h2>1st heading</h2>
+
+      <p>
+        <strong>JavaScript & the DOM</strong>
+        </p>
+        <p>
+        <strong>Javascripts relationship to HTML & CSS</strong>
+        </p>
+        <p>
+        There are 3 languages of the web. HTML creates the structure and basic content of a web page, CSS adds the style, and JavaScript brings it to life. <br><br>If you were to think of a web page as a car:
+        </p>
+        <p>
+        HTML would be the chassis, the panels, the seats, the ignition, the buttons, the levers & the pedals. <br><br>CSS would be all of the style on your car: the cushions, the fabric, the paint, the trim, the fonts & the shapes.<br><br>JavaScript would be the engine & doer of all the things that your car can do once you turn it on. It opens the wing mirrors, makes the beeps, starts the music, accelerates when you push the accelerator, brakes when you hit the brakes, & blinks the indicators when you flick the lever.
+        </p>
+        <p>
+        <strong>Control flow & loops</strong>
+        </p>
+        <p>
+        When a piece of JavaScript code is executed there is a control flow which is how the code is controlled to flow. While it does run from start to finish when first executed, it’s very common that there will be some pieces of code which redirect the control flow to do something else before carrying on with running the rest of the code in order.
+        </p>
+        <p>
+        For example if I was running a program to mow the lawns, when I get to the lawnmower I check the petrol, and if there isn’t enough petrol in there, it will take me out of the ordinary flow of mowing the lawns because I would then have to execute another “function” before the lawns can be done.<br><br>Filling up the lawn mower, it seems to happen linearly in time because I am flexible, but because a script of code is a linear document, the function for filling up would be stored in another part of the document, which ensures that the lawn mowing function is tidy, so the control flow would go run that function, before coming back to finish taking the lawnmower out of the garage.
+        </p>
+        <p>
+        To change the flow the script uses many different control structures like if…else statements, conditionals, loops, & functions.
+        </p>
+        <p>
+        The previous example was an if…else statement, if (there’s not enough petrol) {Fill it up}. Which would then run a loop function to fill up the petrol, starting at empty, I would continue to run the function of pouring petrol into the tank, until the condition of full is met, at which point I exit the loop and carry on with the rest of the mowing lawns function.
+        </p>
+        <p>
+        There may even be lines of code waiting for events to happen to run another set of code, for example, while mowing the lawns, my wife might come out and say “Hey can you give me a hand to lift this table?”, which is like pushing a button on my DOM that pauses mowing the lawns & starts a completely different helpfulHusband function.
+        </p>
+        <p>
+        <br>
+        </p>
+        <p>
+        Let Lawn = [1, 1, 1, 1, 1, 1, 1, 1, 1 ] (the length of the grass represented by these 1’s)
+        </p>
+        <p>
+        GrassGrows () {
+        </p>
+        <p>
+        Lawn = [, 5, 5, 6, 5, lawn chairs 5, 5, 7, 7, 5, clothes peg]
+        </p>
+        <p>
+        CheckTheGrassWithYourEyes()
+        </p>
+        <p>
+         { If the grass is longer than a 4 then lawnsNeedToBeCut() or else end program}
+        </p>
+        <p>
+        lawnsNeedToBeCut() { 
+        </p>
+        <p>
+        If the grass is wet then:
+        </p>
+        <p>
+        end program (return)<br><br>Else if it’s sunny:
+        </p>
+        <p>
+        Move the chairs & table off of the lawn()
+        </p>
+        <p>
+        check for pegs on the lawn()
+        </p>
+        <p>
+        get garage key()
+        </p>
+        <p>
+        open garage()
+        </p>
+        <p>
+        check there’s enough fuel(in the lawnMower)
+        </p>
+        <p>
+        if false (not enough) then fillUpLawnMower()
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+        checkTheresEnoughFuel() {
+        </p>
+        <p>
+        If enough then 
+        </p>
+        <p>
+        return true (yes there’s enough!)
+        </p>
+        <p>
+        Else
+        </p>
+        <p>
+        Return false
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+        Function checkForPegsOnTheLawn() {
+        </p>
+        <p>
+        For (start at 0 (first part of Lawn; 
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+         
+        </p>
+        <p>
+        Function fillUpLawnmower() {
+        </p>
+        <p>
+        Get petrol can, put on pouring nozzle, open lawnmower cap, 
+        </p>
+        <p>
+        Pour petrol in for Loop (start from 0; run until the petrol reaches the top of the tank;  increase amount by 10mL{
+        </p>
+        <p>
+        While the petrol has still not reached the top,  keep pouring at this steady pace(not too fast, not too slow) 
+        </p>
+        <p>
+        }
+        </p>
+        <p>
+        Put cap back on, put away petrol can}
+        </p>
+        <p>
+        <strong>What is the DOM & how might you interact with it?</strong>
+        </p>
+        <p>
+        “DOM” stands for Document Object Model. 
+        </p>
+        <p>
+        Whenever you go to a webpage, the browser creates a DOM of that page.
+        </p>
+        <p>
+        It helps if you understand what an <em>object</em> is in JavaScript. As that is essentially what the Document Object is. But this object is huge, and includes everything that your webpage is made up of.
+        </p>
+        <p>
+        The DOM is what enables you to interact with the web page. When you push something, scroll, swipe, enter data or have any other interactions with the page, the DOM is what facilitates that. It allows programs & scripts to access & update the structure, style, content within a web page.
+        </p>
+        <p>
+        You can inspect the DOM using DevTools (ctrl+shift+i). 
+        </p>
+        <p>
+        To see the document object in all its glory, within the DevTools console you can type “console.log(document.all)”.
+        </p>
+        <p>
+        Or after you type “console.log(document.” you should see a list of all the things within the document object that you can inspect.
+        </p>
+        <p>
+        Then you can interact with the DOM from your JavaScript file in much the same way, by referencing “document.” and the part of the document you would like to access. 
+        </p>
+        <p>
+        Some of the most basic but powerful ways to use the DOM from JS are:
+        </p>
+        <p>
+        document.getElementsByClassName(“myClassName”)
+        </p>
+        <p>
+        Which will return an array containing all the elements in the document with the class “myClassName”.
+        </p>
+        <p>
+        document.queryselector(“#getMeByMyId”).onclick = myFunction
+        </p>
+        <p>
+        Which as that indicates by the “#” would point to the HTML element in the document with the id “getMeByMyId”. This “.onclick” method would tell the document to “listen” for a click on the element with this id, & when clicked would run “myFunction”.
+        </p>
+        <p>
+        Event.target
+        </p>
+        <p>
+        This is one of my favourites. After listening for a click, you can then access that event “the click” with “event.target”. To see what this returns at what it gives you access to within the DOM, you can add “console.log(”event.target”)” inside the function that gets called (i.e. “myFunction” from the example above), as long as when declaring the function you also put “event” within the () i.e. `myFunction(event) {
+        </p>
+        <p>
+        console.log(”event.target”)}. This is particularly helpful when you need information from the element being clicked to know which data to access with your JS.
+        </p>
+        <p>
+        <strong>Accessing data from arrays & objects</strong>
+        </p>
+        <p>
+        Arrays & objects are a great way to store data, so how do you access that data when you need it?
+        </p>
+        <p>
+        <h3>Arrays<h3>
+        </p>
+        <p>
+        The simplest way to access data from a specific position in an array is with: 
+        </p>
+        <p>
+        Array[i]
+        </p>
+        <p>
+        Where i is the index of the array. I.e array[2] accesses pig from:
+        </p>
+        <p>
+        myArray = [dog, rabbit, pig, dinosaur]
+        </p>
+        <p>
+        Notice that in arrays you count from 0. 
+        </p>
+        <p>
+        Dog 0
+        </p>
+        <p>
+        Rabbit 1
+        </p>
+        <p>
+        Pig 2
+        </p>
+        <p>
+        Dinosaur 3
+        </p>
+        <p>
+        There are also some  <a href=”https://www.w3schools.com/js/js_array_methods.asp”>array methods</a> that you can use to manipulate the data in more complex ways.
+        </p>
+        <p>
+        <h3>Objects<h3>
+        </p>
+        <p>
+        The simple way to access data inside objects is to use the property name to reference the position the data is stored.
+        </p>
+        <p>
+        You can do this in two ways:
+        </p>
+        <p>
+        objectName.propertyName
+        </p>
+        <p>
+        Or
+        </p>
+        <p>
+        objectName[“propertyName”]
+        </p>
+        <p>
+        The first way being the simpler & tidier option. But the second way can be extremely useful. The reason that “propertyName” is contained within quotation marks here, is because you could also reference a variable inside of the [], which is incredibly handy as you can store received data from the DOM as a variable to then access an object property with that variable.
+        </p>
+        <p>
+        <strong>What are Functions?</strong>
+        </p>
+        <p>
+        Functions are pieces of code that perform a set of coded actions. 
+        </p>
+        <p>
+        You can build a function to do something over and over again, whenever you ask it too.
+        </p>
+        <p>
+        A bit like if you train your dog to sit, so when you say “sit”, that’s what your dog does.
+        </p>
+        <p>
+        But functions can also be much more complex than this, for example:
+        </p>
+        <p>
+        Say that you run a shop & have trained a staff member to “open up” in the morning, there are a set of instructions that they would follow to do that, which might look like this:
+        </p>
+        <p>
+        And calling the function would look like this:
+        </p>
+        <p>
+        As you can see, the “openUp” function contains 5 other functions which would all have their own set of instructions to perform their tasks. You can also then use any of those functions individually if you need to. After a power cut you might need to run “putMusicOn()” again because Spotify paused when the speaker disconnected.
+        </p>
+        <p>
+        These are helpful because they streamline your code. When you have multiple lines of code that are going to be needed more than once, if they’re written in a function then all you have to do is call that one function rather than copy 10 lines of code all over the place. This makes reading code much easier. It means less storage is taken in a program. And it makes the programmers life easier.
+        </p>
+
+      <p>This is some test content</p>
+    </div>
+  </body>
+</html>
