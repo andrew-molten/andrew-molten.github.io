@@ -178,6 +178,10 @@ img {
   margin-left: -0.5em;
 }
 
+.font-size-sml {
+  font-size: small;
+}
+
 @media (max-width: 600px) {
   .row {
     flex-direction: column;

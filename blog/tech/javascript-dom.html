@@ -35,16 +35,16 @@
         <p>
         <strong>HTML</strong> would be the chassis, the panels, the seats, the ignition, the buttons, the levers & the pedals. </p>
       </div>
-        <div class="column col-centre">
+        <div class="column col-centre  font-size-sml">
           <img src="https://artoftroubleshooting.com/wp-content/uploads/2011/11/bare-bones-car.jpg?w=1024" class="small-img"><br/>
-        <p><em>(image: <a href="https://www.flickr.com/photos/mobili/4891218621/">Mobilus In Mobili</a> / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>)</em></p>
+        <p><em>(image: <a href="https://www.flickr.com/photos/mobili/4891218621/" class="p-link">Mobilus In Mobili</a> / <a href="https://creativecommons.org/licenses/by/2.0/" class="p-link">CC BY 2.0</a>)</em></p>
       </div>
       </div>
         <div class="row">
           <div class="column">
 
         <img src="../../images/javascript-dom/aston-martin-one-77.jpg" class="small-img">
-        <p><em>(image: <a href="https://wallpapercave.com/w/wp1857259">wallpapercave.com</a>)</em></p>
+        <p><em>(image: <a href="https://wallpapercave.com/w/wp1857259" class="p-link font-size-sml">wallpapercave.com</a>)</em></p>
       </div>
       <div class="column">
         <p><strong>CSS</strong> would be all of the style on your car: the cushions, the fabric, the paint, the trim, the fonts & the shapes.</p>
@@ -60,7 +60,7 @@
         <div class="row">
         <iframe src="https://giphy.com/embed/mNT2zQTgAEY5q"  class="giphy-embed img-width-50" allowFullScreen></iframe><iframe src="https://giphy.com/embed/u73i9oAFudm1i" class="giphy-embed img-width-50" allowFullScreen></iframe>
       </div>
-      <p><a href="https://giphy.com/gifs/car-headlights-u73i9oAFudm1i">via GIPHY</a></p>
+      <p><a href="https://giphy.com/gifs/car-headlights-u73i9oAFudm1i" class="p-link font-size-sml"><em>via GIPHY</em></a></p>
       </div>
         
       </div>
@@ -135,18 +135,18 @@
         <p>
         Which as it indicates by the “#” accesses the HTML element in the DOM with the id “getMeByMyId”. This “.onclick” method tells the document to “listen” for a click on this element, & when clicked runs “myFunction()”. Note that you don't use the brackets in the event listener because otherwise the function will be called immediately upon parsing.
         </p>
-        <img src="../../images/javascript-dom/eventTarget.jpg" alt="code-block" class="small-img" id="eventTarget">
+        <img src="../../images/javascript-dom/eventImage.jpg" alt="code-block" class="small-img" id="eventImage">
         <p>
-        A favourite of mine. After listening for anevent like a click, you can access the data from that event (the click) using “event.target”. To see what this gives you access to, add “console.log(”event.target”)” inside a function that gets called (i.e. “myFunction” from the example above), as long as when declaring the function you also put “event” within the () i.e. `myFunction(event) {
+        When you listen for an event like a click, you can then access the data from that event in the function that gets called. To see what this gives you access to, open up you DevTools console and click the image of that piece of code. You should see the event logged in your console.
         </p>
         <p>
-        console.log(”event.target”)}. This is particularly helpful when you need information from the element being clicked to know which data to access with your JS.
+         A really handy use case for this, is if you need an ID from the DOM to tell the function which button was just pushed.
         </p>
         <p>
         <h2>Accessing data from arrays & objects</h2>
         </p>
         <p>
-        Arrays & objects are a great way to store data, so how do you access that data when you need it?
+        Arrays & objects store your data, so how do you access that data when you need it?
         </p>
         <p>
         <h3>Arrays</h3>
@@ -154,32 +154,17 @@
         <p>
         The simplest way to access data from a specific position in an array is with: 
         </p>
+        <img src="../../images/javascript-dom/arrayI.jpg" alt="code-block" class="small-img">
         <p>
-        Array[i]
+        Where i is the index of the array.
+        </p>
+        <p>So this is what returning values from an array would look like:</p>
+        <img src="../../images/javascript-dom/myArray.jpg" alt="code-block" class="small-img">
+        <p>
+        Notice that in arrays you count from 0 as the first value.
         </p>
         <p>
-        Where i is the index of the array. I.e array[2] accesses pig from:
-        </p>
-        <p>
-        myArray = [dog, rabbit, pig, dinosaur]
-        </p>
-        <p>
-        Notice that in arrays you count from 0. 
-        </p>
-        <p>
-        Dog 0
-        </p>
-        <p>
-        Rabbit 1
-        </p>
-        <p>
-        Pig 2
-        </p>
-        <p>
-        Dinosaur 3
-        </p>
-        <p>
-        There are also some  <a href=”https://www.w3schools.com/js/js_array_methods.asp”>array methods</a> that you can use to manipulate the data in more complex ways.
+        There are also some cool <a href=”https://www.w3schools.com/js/js_array_methods.asp” class="p-link">array methods</a> that you can use to manipulate the data in more complex ways.
         </p>
         <p>
         <h3>Objects</h3>
@@ -234,4 +219,4 @@
     </div>
   </body>
 </html>
-<!-- <script src="../../scripts/javascript-dom.js"></script> -->
+<script src="../../scripts/javascript-dom.js"></script>

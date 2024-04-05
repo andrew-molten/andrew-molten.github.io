@@ -35,7 +35,7 @@ function fillLawnMower() {
   // Pour petrol in
   for (petrolPoured = 0; lawnMower.petrolTank < 10; petrolPoured++) {
     lawnMower.petrolTank++
-    console.log(lawnMower.petrolTank)
+    console.log('Petrol Tank is at ' + lawnMower.petrolTank)
   }
   // replaceCap()
 }
@@ -45,6 +45,15 @@ function pushLawnMower() {
 }
 mowLawns()
 
-document.getElementsByClassName('myClassName')
+// document.getElementsByClassName('myClassName')
 
-document.queryselector('#getMeByMyId').onclick = myFunction
+// document.querySelector('#getMeByMyId').onclick = myFunction
+
+document.querySelector('#eventImage').onclick = (event) => console.log(event)
+
+myArray = ['dog', 'rabbit', 'pig', 'dinosaur']
+
+console.log(myArray[0]) // returns "dog"
+console.log(myArray[1]) // returns "rabbit"
+console.log(myArray[2]) // returns "pig"
+console.log(myArray[3]) // returns "dinosaur"
