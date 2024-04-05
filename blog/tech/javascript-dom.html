@@ -85,27 +85,34 @@
         <p>
         To change the flow the script uses many different control structures like if…else statements, conditionals, loops, & functions.
         </p>
-        <img src="../../images/javascript-dom/mowLawnsFunction.jpg" class="small-img">
+        <img src="../../images/javascript-dom/mowLawnsCheckPetrol.jpg" class="small-img">
         <p>
-        This ternary operator states, if (there’s not enough petrol) then {Fill it up}. Which would then run a loop function to fill up the petrol, starting at empty, I would continue to run the function of pouring petrol into the tank, until the condition of full is met, at which point I exit the loop and carry on with the rest of the mowing lawns function.
+        This ternary operator is a conditional which states: <em>if (there’s not enough petrol) then {Fill it up}</em>.Which would call <em>fillLawnMower()</em>:</p>
+        <img src="../../images/javascript-dom/mowLawnsFillLawnMower.jpg" class="small-img">
+
+        <p>
+        Which runs a couple of functions before running a for loop, which will start at 0, and keep repeating the function until it is no longer meeting the loop condition of: <em>lawnMower.petrolTank &#60; 10</em>, at which point it exits the loop and continues running mowLawns()
         </p>
         <p>
-        There may even be lines of code waiting for events to happen to run another set of code, for example, while mowing the lawns, my wife might come out and say “Hey can you give me a hand to lift this table?”, which is like pushing a button on my DOM that pauses mowing the lawns & starts a completely different helpfulHusband function.
+        There may even be lines of code waiting for events to trigger a function, for example:</p>
+        
+        <p>While mowing the lawns, my wife might say “Can you give me a hand to lift this table?”, which is like pushing a button that pauses lawnmowing & starts a different <em>helpfulHusband</em> function.
         </p>
+        <p>All of this is to say, that while writing code, it's important to understand the control flow & loops that will affect the order that the code runs in.</p>
+
+        <h2>What's the DOM & how might you interact with it?</h2>
         
-        <h2>What is the DOM & how might you interact with it?</h2>
-        
-        <p>
+        <h3>
         “DOM” stands for Document Object Model. 
-        </p>
+        </h3>
         <p>
         Whenever you go to a webpage, the browser creates a DOM of that page.
         </p>
         <p>
-        It helps if you understand what an <em>object</em> is in JavaScript. As that is essentially what the Document Object is. But this object is huge, and includes everything that your webpage is made up of.
+        I you know what an <em>object</em> in JavaScript is. That's essentially what the Document Object is. But the document object is built by the browser, it's huge, and includes everything that your webpage is made up of.
         </p>
         <p>
-        The DOM is what enables you to interact with the web page. When you push something, scroll, swipe, enter data or have any other interactions with the page, the DOM is what facilitates that. It allows programs & scripts to access & update the structure, style, content within a web page.
+        The DOM is what enables you to interact with the web page. When you click things, scroll, swipe, enter data or have any other interactions with the page, the DOM is what facilitates that. It allows programs & scripts to access & update the structure, style & content within a web page.
         </p>
         <p>
         You can inspect the DOM using DevTools (ctrl+shift+i). 
@@ -113,11 +120,12 @@
         <p>
         To see the document object in all its glory, within the DevTools console you can type “console.log(document.all)”.
         </p>
+        <img src="../../images/javascript-dom/consoleLogDocumentAll.jpg" alt="DOM" class="small-img">
         <p>
         Or after you type “console.log(document.” you should see a list of all the things within the document object that you can inspect.
         </p>
         <p>
-        Then you can interact with the DOM from your JavaScript file in much the same way, by referencing “document.” and the part of the document you would like to access. 
+        You can also interact with the DOM from your JavaScript file in much the same way, by referencing “document.” and which part you want to access. 
         </p>
         <p>
         Some of the most basic but powerful ways to use the DOM from JS are:
@@ -235,3 +243,4 @@
     </div>
   </body>
 </html>
+<!-- <script src="../../scripts/javascript-dom.js"></script> -->

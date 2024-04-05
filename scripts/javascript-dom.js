@@ -19,22 +19,28 @@ const lawnMower = {
 }
 
 function mowLawns() {
-  checkPetrol(lawnMower)
-  getLawnmowerOut()
-  startLawnmower()
-  pushLawnMower(lawn)
+  checkPetrol()
+  // getLawnmowerOut()
+  // startLawnmower()
+  // pushLawnMower(lawn)
 }
 
-function checkPetrol(lawnMower) {
+function checkPetrol() {
   lawnMower.petrolTank < 3 ? fillLawnMower() : ''
 }
 
-function fillLawnMower(lawnMower) {
-  getPetrolCan()
-  openLawnmowerCap()
+function fillLawnMower() {
+  // getPetrolCan()
+  // openLawnmowerCap()
   // Pour petrol in
   for (petrolPoured = 0; lawnMower.petrolTank < 10; petrolPoured++) {
     lawnMower.petrolTank++
+    console.log(lawnMower.petrolTank)
   }
-  replaceCap()
+  // replaceCap()
 }
+
+function pushLawnMower() {
+  console.log('Mowing lawns')
+}
+mowLawns()
