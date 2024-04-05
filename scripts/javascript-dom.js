@@ -57,3 +57,19 @@ console.log(myArray[0]) // returns "dog"
 console.log(myArray[1]) // returns "rabbit"
 console.log(myArray[2]) // returns "pig"
 console.log(myArray[3]) // returns "dinosaur"
+
+const myObjectName = {
+  propertyName: 'value',
+  nextpropertyName: 7,
+  otherPropertyName: 'Another Value',
+}
+
+myObjectName.propertyName
+
+// or
+
+myObjectName['propertyName']
+
+let myVariable = 'otherPropertyName'
+
+console.log(myObjectName[myVariable]) // returns "Another Value"

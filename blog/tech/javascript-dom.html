@@ -73,6 +73,7 @@
         </p>
         
         <h3>For example if I was running a program to mow the lawns:</h3>
+        <img src="../../images/javascript-dom/person-mowing-lawns.jpeg" class="img-width-50 centre">
 
         <p>When I get to the lawnmower I check the petrol, and if there isn’t enough petrol in there, it will take me out of the ordinary flow of mowing the lawns because I would then have to execute another “function” before the lawns can be done.</p>
 
@@ -160,6 +161,7 @@
         </p>
         <p>So this is what returning values from an array would look like:</p>
         <img src="../../images/javascript-dom/myArray.jpg" alt="code-block" class="small-img">
+        <p>I have put my examples inside console.log()'s so that they return in the console.</p>
         <p>
         Notice that in arrays you count from 0 as the first value.
         </p>
@@ -170,23 +172,20 @@
         <h3>Objects</h3>
         </p>
         <p>
-        The simple way to access data inside objects is to use the property name to reference the position the data is stored.
+        The simple way to access data inside objects is by using the property name to reference the value stored.
         </p>
+        <img src="../../images/javascript-dom/object-example.jpg" alt="code-block" class="small-img">
         <p>
         You can do this in two ways:
         </p>
+        <img src="../../images/javascript-dom/access-objects.jpg" alt="code-block" class="small-img">
         <p>
-        objectName.propertyName
+        The first way being simpler & tidier, while the second way has some special use cases. 
+      </p>
+        <p>The reason that “propertyName” is inside quotation marks, is because you can also reference a variable inside of the [], which is incredibly handy as you can store received data from the DOM in a variable & then access an object property with that variable.
         </p>
-        <p>
-        Or
-        </p>
-        <p>
-        objectName[“propertyName”]
-        </p>
-        <p>
-        The first way being the simpler & tidier option. But the second way can be extremely useful. The reason that “propertyName” is contained within quotation marks here, is because you could also reference a variable inside of the [], which is incredibly handy as you can store received data from the DOM as a variable to then access an object property with that variable.
-        </p>
+
+        <img src="../../images/javascript-dom/access-object-with-variable.jpg" alt="code-block" class="small-img">
        
         <h2>What are Functions?</h2>
         
@@ -194,28 +193,29 @@
         Functions are pieces of code that perform a set of coded actions. 
         </p>
         <p>
-        You can build a function to do something over and over again, whenever you ask it too.
+        You can build a function to do something over and over again, whenever you ask it to.
         </p>
         <p>
         A bit like if you train your dog to sit, so when you say “sit”, that’s what your dog does.
         </p>
-        <p>
-        But functions can also be much more complex than this, for example:
-        </p>
+        <h3>
+        But functions can also be much more complex, for example:
+        </h3>
+       
         <p>
         Say that you run a shop & have trained a staff member to “open up” in the morning, there are a set of instructions that they would follow to do that, which might look like this:
         </p>
+        <img src="../../images/javascript-dom/openUp.jpg" alt="code-block" class="small-img">
         <p>
         And calling the function would look like this:
         </p>
+        <img src="../../images/javascript-dom/openUpCall.jpg" alt="code-block" class="small-img">
         <p>
-        As you can see, the “openUp” function contains 5 other functions which would all have their own set of instructions to perform their tasks. You can also then use any of those functions individually if you need to. After a power cut you might need to run “putMusicOn()” again because Spotify paused when the speaker disconnected.
+        As you can see, the “openUp” function contains 5 other functions which all have their own set of instructions to perform. You can also call any of those individual functions somwewhere else if you need to. After a power cut you might need to run “putMusicOn()” again because Spotify paused when the speaker disconnected.
         </p>
         <p>
-        These are helpful because they streamline your code. When you have multiple lines of code that are going to be needed more than once, if they’re written in a function then all you have to do is call that one function rather than copy 10 lines of code all over the place. This makes reading code much easier. It means less storage is taken in a program. And it makes the programmers life easier.
+        Functions are helpful because they streamline your code. When you have multiple lines of code that are going to be needed more than once, if they’re written in a function then all you have to do is call that one function rather than copy 10 lines of code all over the place. This makes reading code much easier. It means your code requires less storage. And it makes the programmers life easier.
         </p>
-
-      <p>This is some test content</p>
     </div>
   </body>
 </html>
