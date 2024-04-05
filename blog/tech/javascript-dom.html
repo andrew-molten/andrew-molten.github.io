@@ -25,125 +25,72 @@
     <div class="container">
         <h2>Javascripts relationship to HTML & CSS</h2>
       
-        <p>
-        There are 3 languages of the web. HTML creates the structure and basic content of a web page, CSS adds the style, and JavaScript brings it to life. <br><br>If you were to think of a web page as a car:
-        </p>
-        <p>
-        HTML would be the chassis, the panels, the seats, the ignition, the buttons, the levers & the pedals. <br><br>CSS would be all of the style on your car: the cushions, the fabric, the paint, the trim, the fonts & the shapes.<br><br>JavaScript would be the engine & doer of all the things that your car can do once you turn it on. It opens the wing mirrors, makes the beeps, starts the music, accelerates when you push the accelerator, brakes when you hit the brakes, & blinks the indicators when you flick the lever.
-        </p>
         
+        <p>
+        There are 3 languages of the web. HTML creates the structure and basic content of a web page, CSS adds the style, and JavaScript brings it to life.
+        <h3>If you were to think of a web page as a car:</h3>
+        <div class="row">
+        <div class="column col-centre-vert">
+        </p>
+        <p>
+        <strong>HTML</strong> would be the chassis, the panels, the seats, the ignition, the buttons, the levers & the pedals. </p>
+      </div>
+        <div class="column col-centre">
+          <img src="https://artoftroubleshooting.com/wp-content/uploads/2011/11/bare-bones-car.jpg?w=1024" class="small-img"><br/>
+        <p><em>(image: <a href="https://www.flickr.com/photos/mobili/4891218621/">Mobilus In Mobili</a> / <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>)</em></p>
+      </div>
+      </div>
+        <div class="row">
+          <div class="column">
+
+        <img src="../../images/javascript-dom/aston-martin-one-77.jpg" class="small-img">
+        <p><em>(image: <a href="https://wallpapercave.com/w/wp1857259">wallpapercave.com</a>)</em></p>
+      </div>
+      <div class="column">
+        <p><strong>CSS</strong> would be all of the style on your car: the cushions, the fabric, the paint, the trim, the fonts & the shapes.</p>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+        <p><strong>JavaScript</strong> would be the engine & programming that makes things happen when you start pushing an pulling buttons and levers. It opens the wing mirrors, starts the music, accelerates & brakes, pops up the lights & blinks the indicators.</p>
+      </div>
+
+      <div class="column">
+        <div class="row">
+        <iframe src="https://giphy.com/embed/mNT2zQTgAEY5q"  class="giphy-embed img-width-50" allowFullScreen></iframe><iframe src="https://giphy.com/embed/u73i9oAFudm1i" class="giphy-embed img-width-50" allowFullScreen></iframe>
+      </div>
+      <p><a href="https://giphy.com/gifs/car-headlights-u73i9oAFudm1i">via GIPHY</a></p>
+      </div>
+        
+      </div>
         <h2>Control flow & loops</h2>
        
         <p>
-        When a piece of JavaScript code is executed there is a control flow which is how the code is controlled to flow. While it does run from start to finish when first executed, it’s very common that there will be some pieces of code which redirect the control flow to do something else before carrying on with running the rest of the code in order.
+        When your JavaScript is executed there's a control flow which controls the order that the code is interpreted in.</p> 
+        
+        <p>While it does run from top to bottom, it’s very common that there will be some pieces of code which redirect the flow to run something else before continuing down the document.
         </p>
-        <p>
-        For example if I was running a program to mow the lawns, when I get to the lawnmower I check the petrol, and if there isn’t enough petrol in there, it will take me out of the ordinary flow of mowing the lawns because I would then have to execute another “function” before the lawns can be done.<br><br>Filling up the lawn mower, it seems to happen linearly in time because I am flexible, but because a script of code is a linear document, the function for filling up would be stored in another part of the document, which ensures that the lawn mowing function is tidy, so the control flow would go run that function, before coming back to finish taking the lawnmower out of the garage.
+        
+        <h3>For example if I was running a program to mow the lawns:</h3>
+
+        <p>When I get to the lawnmower I check the petrol, and if there isn’t enough petrol in there, it will take me out of the ordinary flow of mowing the lawns because I would then have to execute another “function” before the lawns can be done.</p>
+
+        <img src="../../images/javascript-dom/mowLawns.jpg" class="small-img">
+        
+        <p>You can see that the <em>checkPetrol()</em> function is called before <em>getLawnmowerOut()</em> so the JS engine would jump over to run <em>checkPetrol()</em> before continuing through <em>mowLawns</em>.</p>
+        
+        <p>In real life, filling up the lawn mower feels like it happens linearly, but because a script is written top to bottom it needs to jump around.
         </p>
         <p>
         To change the flow the script uses many different control structures like if…else statements, conditionals, loops, & functions.
         </p>
+        <img src="../../images/javascript-dom/mowLawnsFunction.jpg" class="small-img">
         <p>
-        The previous example was an if…else statement, if (there’s not enough petrol) {Fill it up}. Which would then run a loop function to fill up the petrol, starting at empty, I would continue to run the function of pouring petrol into the tank, until the condition of full is met, at which point I exit the loop and carry on with the rest of the mowing lawns function.
+        This ternary operator states, if (there’s not enough petrol) then {Fill it up}. Which would then run a loop function to fill up the petrol, starting at empty, I would continue to run the function of pouring petrol into the tank, until the condition of full is met, at which point I exit the loop and carry on with the rest of the mowing lawns function.
         </p>
         <p>
         There may even be lines of code waiting for events to happen to run another set of code, for example, while mowing the lawns, my wife might come out and say “Hey can you give me a hand to lift this table?”, which is like pushing a button on my DOM that pauses mowing the lawns & starts a completely different helpfulHusband function.
-        </p>
-        <p>
-        <br>
-        </p>
-        <p>
-        Let Lawn = [1, 1, 1, 1, 1, 1, 1, 1, 1 ] (the length of the grass represented by these 1’s)
-        </p>
-        <p>
-        GrassGrows () {
-        </p>
-        <p>
-        Lawn = [, 5, 5, 6, 5, lawn chairs 5, 5, 7, 7, 5, clothes peg]
-        </p>
-        <p>
-        CheckTheGrassWithYourEyes()
-        </p>
-        <p>
-         { If the grass is longer than a 4 then lawnsNeedToBeCut() or else end program}
-        </p>
-        <p>
-        lawnsNeedToBeCut() { 
-        </p>
-        <p>
-        If the grass is wet then:
-        </p>
-        <p>
-        end program (return)<br><br>Else if it’s sunny:
-        </p>
-        <p>
-        Move the chairs & table off of the lawn()
-        </p>
-        <p>
-        check for pegs on the lawn()
-        </p>
-        <p>
-        get garage key()
-        </p>
-        <p>
-        open garage()
-        </p>
-        <p>
-        check there’s enough fuel(in the lawnMower)
-        </p>
-        <p>
-        if false (not enough) then fillUpLawnMower()
-        </p>
-        <p>
-        }
-        </p>
-        <p>
-        checkTheresEnoughFuel() {
-        </p>
-        <p>
-        If enough then 
-        </p>
-        <p>
-        return true (yes there’s enough!)
-        </p>
-        <p>
-        Else
-        </p>
-        <p>
-        Return false
-        </p>
-        <p>
-        }
-        </p>
-        <p>
-        Function checkForPegsOnTheLawn() {
-        </p>
-        <p>
-        For (start at 0 (first part of Lawn; 
-        </p>
-        <p>
-        }
-        </p>
-        <p>
-         
-        </p>
-        <p>
-        Function fillUpLawnmower() {
-        </p>
-        <p>
-        Get petrol can, put on pouring nozzle, open lawnmower cap, 
-        </p>
-        <p>
-        Pour petrol in for Loop (start from 0; run until the petrol reaches the top of the tank;  increase amount by 10mL{
-        </p>
-        <p>
-        While the petrol has still not reached the top,  keep pouring at this steady pace(not too fast, not too slow) 
-        </p>
-        <p>
-        }
-        </p>
-        <p>
-        Put cap back on, put away petrol can}
         </p>
         
         <h2>What is the DOM & how might you interact with it?</h2>

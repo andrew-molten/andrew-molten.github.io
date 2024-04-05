@@ -110,6 +110,11 @@ img {
   height: auto;
 }
 
+.img-width-50 {
+  max-width: 50%;
+  height: auto;
+}
+
 .blog-link-card {
   font-size: large;
   /* background-color: bisque; */
