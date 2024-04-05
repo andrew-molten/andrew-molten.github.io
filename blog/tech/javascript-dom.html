@@ -122,31 +122,22 @@
         </p>
         <img src="../../images/javascript-dom/consoleLogDocumentAll.jpg" alt="DOM" class="small-img">
         <p>
-        Or after you type “console.log(document.” you should see a list of all the things within the document object that you can inspect.
-        </p>
-        <p>
         You can also interact with the DOM from your JavaScript file in much the same way, by referencing “document.” and which part you want to access. 
         </p>
+        <h3>
+        Some basic but powerful ways to access the DOM from your JS script are:
+        </h3>
+        <img src="../../images/javascript-dom/getElementsByClassName.jpg" alt="code-block" class="small-img">
         <p>
-        Some of the most basic but powerful ways to use the DOM from JS are:
+        Which returns an array containing all the elements in the DOM with the class “myClassName”.
         </p>
+        <img src="../../images/javascript-dom/queryselector.jpg" alt="code-block" class="small-img">
         <p>
-        document.getElementsByClassName(“myClassName”)
+        Which as it indicates by the “#” accesses the HTML element in the DOM with the id “getMeByMyId”. This “.onclick” method tells the document to “listen” for a click on this element, & when clicked runs “myFunction()”. Note that you don't use the brackets in the event listener because otherwise the function will be called immediately upon parsing.
         </p>
+        <img src="../../images/javascript-dom/eventTarget.jpg" alt="code-block" class="small-img" id="eventTarget">
         <p>
-        Which will return an array containing all the elements in the document with the class “myClassName”.
-        </p>
-        <p>
-        document.queryselector(“#getMeByMyId”).onclick = myFunction
-        </p>
-        <p>
-        Which as that indicates by the “#” would point to the HTML element in the document with the id “getMeByMyId”. This “.onclick” method would tell the document to “listen” for a click on the element with this id, & when clicked would run “myFunction”.
-        </p>
-        <p>
-        Event.target
-        </p>
-        <p>
-        This is one of my favourites. After listening for a click, you can then access that event “the click” with “event.target”. To see what this returns at what it gives you access to within the DOM, you can add “console.log(”event.target”)” inside the function that gets called (i.e. “myFunction” from the example above), as long as when declaring the function you also put “event” within the () i.e. `myFunction(event) {
+        A favourite of mine. After listening for anevent like a click, you can access the data from that event (the click) using “event.target”. To see what this gives you access to, add “console.log(”event.target”)” inside a function that gets called (i.e. “myFunction” from the example above), as long as when declaring the function you also put “event” within the () i.e. `myFunction(event) {
         </p>
         <p>
         console.log(”event.target”)}. This is particularly helpful when you need information from the element being clicked to know which data to access with your JS.

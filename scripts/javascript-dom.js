@@ -44,3 +44,7 @@ function pushLawnMower() {
   console.log('Mowing lawns')
 }
 mowLawns()
+
+document.getElementsByClassName('myClassName')
+
+document.queryselector('#getMeByMyId').onclick = myFunction
