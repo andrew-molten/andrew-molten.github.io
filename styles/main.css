@@ -192,6 +192,14 @@ img {
     flex-direction: column;
   }
 
+  .keep-row {
+    flex-direction: row;
+  }
+
+  .col-rev {
+    flex-direction: column-reverse;
+  }
+
   .heading-container {
     text-align: left;
   }
