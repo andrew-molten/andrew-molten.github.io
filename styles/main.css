@@ -36,7 +36,7 @@ img {
 .container {
   background-color: #fffcf8;
   padding: 1.5em;
-  margin: 1em 10% 10% 10%;
+  margin: 1em 10% 1em 10%;
 }
 
 .sea-edge {
@@ -185,6 +185,13 @@ img {
 
 .font-size-sml {
   font-size: small;
+}
+
+.home-page-icon {
+  width: 10%;
+  margin-left: 5%;
+  color: #fdf8f1;
+  align-items: center;
 }
 
 @media (max-width: 600px) {
