@@ -10,6 +10,7 @@ a {
 
 p {
   margin: 0.5em;
+  text-align: justify;
 }
 
 li {
@@ -26,6 +27,10 @@ img {
 
 .p-link {
   color: rgb(0, 72, 255);
+}
+
+.center {
+  text-align: center;
 }
 
 .container {
