@@ -1,6 +1,7 @@
 body {
   background-color: rgb(67, 67, 67);
   margin: 0;
+  font-size: 16pt;
 }
 
 a {
@@ -195,6 +196,18 @@ img {
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 13pt;
+  }
+
+  .container {
+    padding: 0.5em;
+  }
+
+  .small-img {
+    max-width: 100%;
+  }
+
   .row {
     flex-direction: column;
   }
