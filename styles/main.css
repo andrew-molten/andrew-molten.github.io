@@ -29,6 +29,41 @@ img {
   margin: auto;
 }
 
+/* .divider {
+  display: flex;
+
+  &:before,
+  &:after {
+    content: '';
+    flex: 1;
+  }
+}
+
+.line {
+  align-items: center;
+  margin: 0.5em -0.5em;
+  /* &:before,
+  &:after { 
+  height: 1px;
+  margin: 0 5em;
+  /* } 
+}
+
+.glow {
+  &:before,
+  &:after {
+    height: 4px;
+    -webkit-filter: blur(5px);
+    border-radius: 5px;
+  }
+  &:before {
+    background: linear-gradient(to right, aqua, #021bff);
+  }
+  &:after {
+    background: linear-gradient(to left, #ff02d1, #021bff);
+  }
+} */
+
 .p-link {
   color: rgb(0, 72, 255);
 }
