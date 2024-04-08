@@ -72,6 +72,11 @@ img {
   text-align: center;
 }
 
+.center-img {
+  display: block;
+  margin: auto;
+}
+
 .container {
   background-color: #fffcf8;
   padding: 1.5em;
