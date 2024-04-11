@@ -243,6 +243,11 @@ img {
   align-items: center;
 }
 
+.hide-image {
+  visibility: hidden;
+  max-height: 0;
+}
+
 @media (max-width: 600px) {
   body {
     font-size: 13pt;
