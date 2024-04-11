@@ -134,6 +134,11 @@ img {
   width: 100%;
 }
 
+.wrap-row {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .column {
   display: flex;
   flex-direction: column;
