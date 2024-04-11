@@ -29,6 +29,10 @@ img {
   margin: auto;
 }
 
+button {
+  border-width: 0;
+}
+
 /* .divider {
   display: flex;
 
@@ -246,6 +250,15 @@ img {
 .hide-image {
   visibility: hidden;
   max-height: 0;
+}
+
+.hide-images-btn {
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  background-color: #c92bb9;
+  border-radius: 0.8em;
+  margin-left: 2em;
+  color: #fff7e5;
+  font-weight: 600;
 }
 
 @media (max-width: 600px) {
