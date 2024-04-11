@@ -19,5 +19,6 @@ function hideCoreOrTechImages(e) {
 function hideBlogPostImages(posts) {
   for (Element of posts) {
     Element.firstElementChild.children[0].classList.toggle('hide-image')
+    Element.firstElementChild.children[2].classList.toggle('br-1em')
   }
 }
