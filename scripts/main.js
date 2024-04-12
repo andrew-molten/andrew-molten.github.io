@@ -26,24 +26,12 @@ function hideBlogPostImages(posts) {
   }
 }
 
-// ///////////////////// Quick find //////////////
+// ///////////////////// NAV //////////////
 
 // When clicked it needs to display a menu
-// const quickFindBtn = document.getElementById('quick-find')
 const topNav = document.getElementById('topnav')
 const header = document.querySelector('.heading-container')
 topNav.addEventListener('click', openNavMenu)
-
-// sort height of button
-// const headerHeight = header.clientHeight
-// const styleSheet = document.querySelector(`link[href*="main.css"]`).sheet
-// const leftOrRight =
-//   screen.width > 600 ? 'left: 1em;' : 'right: 1em; text-align: right'
-// console.log(screen.width)
-// styleSheet.insertRule(
-//   `.topnav{position: absolute;top: ${headerHeight - 120}px;${leftOrRight}}`,
-//   styleSheet.cssRules.length
-// )
 
 function openNavMenu() {
   topNav.classList.toggle('topnav-clicked')
@@ -70,5 +58,3 @@ function generateBlogPostList(label) {
     topNav.innerHTML += `<br/><a href="${link}">${postTitle}</a>`
   }
 }
-
-//when you click away it should disappear
