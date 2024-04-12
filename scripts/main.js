@@ -4,7 +4,7 @@
 
 const coreBlogPosts = document.getElementById('core-blog-posts')
 const techBlogPosts = document.getElementById('tech-blog-posts')
-const templateBlogPosts = document.getElementById('template-blog-posts')
+const templateBlogPosts = document.getElementById('templates-blog-posts')
 const hideTechBtn = document.getElementById('hide-tech-images')
 const hideCoreBtn = document.getElementById('hide-core-images')
 
@@ -117,18 +117,15 @@ function generateBlogLinkCards(object, div) {
   }
 }
 
-generateBlogLinkCards(blogLinks.tech, techBlogPosts)
-generateBlogLinkCards(blogLinks.core, coreBlogPosts)
-generateBlogLinkCards(blogLinks.templates, templateBlogPosts)
-
 //////////////////////////////////////////////////////////////////////////////
 // /////////////////////////// NAV ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-// When clicked it needs to display a menu
 const topNav = document.getElementById('topnav')
 const header = document.querySelector('.heading-container')
 topNav.addEventListener('click', openNavMenu)
+
+// Next step is to add this to all the other pages, and the template.
 
 function openNavMenu() {
   topNav.classList.toggle('topnav-clicked')
@@ -138,20 +135,16 @@ function openNavMenu() {
 }
 
 function generateNavMenuMarkUp() {
-  generateBlogPostList('Tech')
-  generateBlogPostList('Core')
-  generateBlogPostList('Templates')
+  generateBlogPostList('tech')
+  generateBlogPostList('core')
+  generateBlogPostList('templates')
 }
 
-function generateBlogPostList(label) {
+function generateBlogPostList(subject) {
+  const label = subject[0].toUpperCase() + subject.slice(1)
   topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
-  let blogPosts
-  if (label == 'Tech') blogPosts = blogLinks.tech
-  if (label == 'Core') blogPosts = blogLinks.core
-  if (label == 'Templates') blogPosts = blogLinks.templates
-
-  for (key of Object.keys(blogPosts)) {
-    const markup = createNavMarkup(blogPosts[key])
+  for (key of Object.keys(blogLinks[subject])) {
+    const markup = createNavMarkup(blogLinks[subject][key])
     topNav.innerHTML += markup
   }
 }
@@ -161,3 +154,11 @@ function createNavMarkup(blog) {
   const link = blog.link
   return `<br/><a href="${link}">${title}</a>`
 }
+
+function init() {
+  generateBlogLinkCards(blogLinks.tech, techBlogPosts)
+  generateBlogLinkCards(blogLinks.core, coreBlogPosts)
+  generateBlogLinkCards(blogLinks.templates, templateBlogPosts)
+}
+
+init()
