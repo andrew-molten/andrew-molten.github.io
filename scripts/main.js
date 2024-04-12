@@ -2,11 +2,9 @@
 //////////////////// HIDE OR SHOW BLOG POST IMAGES ///////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
-const coreBlogPosts = document.getElementById('core-blog-posts').children
-const techBlogPosts = document.getElementById('tech-blog-posts').children
-const templateBlogPosts = document.getElementById(
-  'template-blog-posts'
-).children
+const coreBlogPosts = document.getElementById('core-blog-posts')
+const techBlogPosts = document.getElementById('tech-blog-posts')
+const templateBlogPosts = document.getElementById('template-blog-posts')
 const hideTechBtn = document.getElementById('hide-tech-images')
 const hideCoreBtn = document.getElementById('hide-core-images')
 
@@ -20,7 +18,7 @@ function hideCoreOrTechImages(e) {
 }
 
 function hideBlogPostImages(posts) {
-  for (Element of posts) {
+  for (Element of posts.children) {
     Element.firstElementChild.children[0].classList.toggle('hide-image')
     Element.firstElementChild.children[2].classList.toggle('br-1em')
   }
@@ -49,21 +47,13 @@ function generateNavMenuMarkUp() {
 function generateBlogPostList(label) {
   topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
   let blogPosts
-  let i = 0
-  if (label == 'Tech') blogPosts = techBlogPosts
-  if (label == 'Core') blogPosts = coreBlogPosts
-  if (label == 'Templates') blogPosts = templateBlogPosts
+  if (label == 'Tech') blogPosts = techBlogPosts.children
+  if (label == 'Core') blogPosts = coreBlogPosts.children
+  if (label == 'Templates') blogPosts = templateBlogPosts.children
   for (post of blogPosts) {
     const postTitle = post.querySelector('.blog-link-name').textContent
     const link = post.firstElementChild.href
-    const imageLink = post.querySelector('.blog-link-img').src
     topNav.innerHTML += `<br/><a href="${link}">${postTitle}</a>`
-    console.log(`${i}: {
-      title: "${postTitle}",
-      link: "${link}",
-      imageLink: "${imageLink}",
-    },`)
-    i++
   }
 }
 
@@ -72,8 +62,28 @@ function generateBlogPostList(label) {
 
 // /////////////////// CREATE BLOG-LINK CARDS //////////////////
 
-function createBlogLinkCard() {
-  console.log('hi')
+function createBlogLinkCard(blog) {
+  const title = blog.title
+  const link = blog.link
+  const imageLink = blog.imageLink
+
+  return `<div class="blog-link-card">
+  <a href="${link}">
+    <img
+      src="${imageLink}"
+      class="blog-link-img"
+    />
+    <br />
+    <div class="blog-card-bg">
+      <img
+        src="images/sea-edge.png"
+        class="sea-edge"
+        alt="abstract colorful triangles"
+      />
+      <p class="blog-link-name">${title}</p>
+    </div>
+  </a>
+</div>`
 }
 
 const blogLinks = {
@@ -135,3 +145,8 @@ const blogLinks = {
     },
   },
 }
+
+// const markup = createBlogLinkCard(blogLinks.core[0])
+console.log(templateBlogPosts)
+// console.log(markup)
+// templateBlogPosts.insertAdjacentElement('beforeend', markup)
