@@ -322,9 +322,11 @@ button {
     flex-direction: row;
   }
 
-  /* .hide-images-btn {
+  .hide-images-btn {
+    position: relative;
+    left: 1em;
     margin-left: 0;
-  } */
+  }
 }
 
 @media (min-width: 1200px) {
