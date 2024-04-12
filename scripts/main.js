@@ -24,45 +24,14 @@ function hideBlogPostImages(posts) {
   }
 }
 
-// ///////////////////// NAV //////////////
-
-// When clicked it needs to display a menu
-const topNav = document.getElementById('topnav')
-const header = document.querySelector('.heading-container')
-topNav.addEventListener('click', openNavMenu)
-
-function openNavMenu() {
-  topNav.classList.toggle('topnav-clicked')
-  topNav.classList.contains('topnav-clicked')
-    ? generateNavMenuMarkUp()
-    : (topNav.innerHTML = '<p id="quick-find">Posts</p>')
-}
-
-function generateNavMenuMarkUp() {
-  generateBlogPostList('Tech')
-  generateBlogPostList('Core')
-  generateBlogPostList('Templates')
-}
-
-function generateBlogPostList(label) {
-  topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
-  let blogPosts
-  if (label == 'Tech') blogPosts = techBlogPosts.children
-  if (label == 'Core') blogPosts = coreBlogPosts.children
-  if (label == 'Templates') blogPosts = templateBlogPosts.children
-  for (post of blogPosts) {
-    const postTitle = post.querySelector('.blog-link-name').textContent
-    const link = post.firstElementChild.href
-    topNav.innerHTML += `<br/><a href="${link}">${postTitle}</a>`
-  }
-}
-
 // get pathname
 // console.log(window.location.pathname)
 
+//////////////////////////////////////////////////////////////////////////////
 // /////////////////// CREATE BLOG-LINK CARDS //////////////////
+//////////////////////////////////////////////////////////////////////////////
 
-function createBlogLinkCard(blog) {
+function createBlogLinkMarkup(blog) {
   const title = blog.title
   const link = blog.link
   const imageLink = blog.imageLink
@@ -146,7 +115,49 @@ const blogLinks = {
   },
 }
 
-// const markup = createBlogLinkCard(blogLinks.core[0])
-console.log(templateBlogPosts)
-// console.log(markup)
-// templateBlogPosts.insertAdjacentElement('beforeend', markup)
+// go through object to create blog cards
+function generateBlogLinkCards(object, div) {
+  for (key of Object.keys(object)) {
+    const markup = createBlogLinkMarkup(object[key])
+    div.insertAdjacentHTML('beforeend', markup)
+  }
+}
+
+// generateBlogLinkCards(blogLinks.tech, techBlogPosts)
+// generateBlogLinkCards(blogLinks.core, coreBlogPosts)
+// generateBlogLinkCards(blogLinks.templates, templateBlogPosts)
+
+//////////////////////////////////////////////////////////////////////////////
+// /////////////////////////// NAV ////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+// When clicked it needs to display a menu
+const topNav = document.getElementById('topnav')
+const header = document.querySelector('.heading-container')
+topNav.addEventListener('click', openNavMenu)
+
+function openNavMenu() {
+  topNav.classList.toggle('topnav-clicked')
+  topNav.classList.contains('topnav-clicked')
+    ? generateNavMenuMarkUp()
+    : (topNav.innerHTML = '<p id="quick-find">Posts</p>')
+}
+
+function generateNavMenuMarkUp() {
+  generateBlogPostList('Tech')
+  generateBlogPostList('Core')
+  generateBlogPostList('Templates')
+}
+
+function generateBlogPostList(label) {
+  topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
+  let blogPosts
+  if (label == 'Tech') blogPosts = techBlogPosts.children
+  if (label == 'Core') blogPosts = coreBlogPosts.children
+  if (label == 'Templates') blogPosts = templateBlogPosts.children
+  for (post of blogPosts) {
+    const postTitle = post.querySelector('.blog-link-name').textContent
+    const link = post.firstElementChild.href
+    topNav.innerHTML += `<br/><a href="${link}">${postTitle}</a>`
+  }
+}
