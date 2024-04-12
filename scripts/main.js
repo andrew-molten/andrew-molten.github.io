@@ -146,12 +146,18 @@ function generateNavMenuMarkUp() {
 function generateBlogPostList(label) {
   topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
   let blogPosts
-  if (label == 'Tech') blogPosts = techBlogPosts.children
-  if (label == 'Core') blogPosts = coreBlogPosts.children
-  if (label == 'Templates') blogPosts = templateBlogPosts.children
-  for (post of blogPosts) {
-    const postTitle = post.querySelector('.blog-link-name').textContent
-    const link = post.firstElementChild.href
-    topNav.innerHTML += `<br/><a href="${link}">${postTitle}</a>`
+  if (label == 'Tech') blogPosts = blogLinks.tech
+  if (label == 'Core') blogPosts = blogLinks.core
+  if (label == 'Templates') blogPosts = blogLinks.templates
+
+  for (key of Object.keys(blogPosts)) {
+    const markup = createNavMarkup(blogPosts[key])
+    topNav.innerHTML += markup
   }
+}
+
+function createNavMarkup(blog) {
+  const title = blog.title
+  const link = blog.link
+  return `<br/><a href="${link}">${title}</a>`
 }
