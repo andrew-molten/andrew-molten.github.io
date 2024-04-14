@@ -146,7 +146,9 @@ function openNavMenu() {
 }
 
 function generateNavMenuMarkUp() {
-  navBtn.innerHTML += `<br/><a href="/" class="nav-home-link">Home<a>`
+  checkIfIndex()
+    ? (navBtn.innerHTML += `<br/><a href="/" class="nav-home-link">Home<a>`)
+    : ''
   generateBlogPostList('tech')
   generateBlogPostList('core')
   generateBlogPostList('templates')
