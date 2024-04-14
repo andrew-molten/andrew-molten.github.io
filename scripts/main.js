@@ -135,13 +135,8 @@ const topNav = document.getElementById('topnav')
 const bottomNav = document.getElementById('bottom-nav')
 const header = document.querySelector('.heading-container')
 const navBtn = document.querySelector('.nav-btn')
-// checkIfIndex()
-//   ? topNav.addEventListener('click', openNavMenu)
-//   : bottomNav.addEventListener('click', openNavMenu)
-navBtn.addEventListener('click', openNavMenu)
 
-// Next step is to add this to all the other pages, and the template.
-// Figure out why bottom-nav is appearing half way up the page
+navBtn.addEventListener('click', openNavMenu)
 
 function openNavMenu() {
   navBtn.classList.toggle('navbtn-clicked')
@@ -151,11 +146,6 @@ function openNavMenu() {
 }
 
 function generateNavMenuMarkUp() {
-  // const indexPostOrder = ['tech', 'core', 'templates']
-  // checkIfIndex() ? '' : indexPostOrder.reverse()
-  // for (subject of indexPostOrder) {
-  //   generateBlogPostList(subject)
-  // }
   navBtn.innerHTML += `<br/><a href="/" class="nav-home-link">Home<a>`
   generateBlogPostList('tech')
   generateBlogPostList('core')
@@ -164,19 +154,11 @@ function generateNavMenuMarkUp() {
 
 function generateBlogPostList(subject) {
   const label = subject[0].toUpperCase() + subject.slice(1)
-  // let markup = `<br/><a class="nav-heading">${label}<a>`
   navBtn.innerHTML += `<br/><br/><a class="nav-heading">${label}<a>`
-  // topNav.insertAdjacentHTML(
-  //   'afterbegin',
-  //   `<br/><a class="nav-heading">${label}<a>`
-  // )
   for (key of Object.keys(blogLinks[subject])) {
     const markup = createNavMarkup(blogLinks[subject][key])
-    // markup += title
-    // topNav.insertAdjacentHTML('afterbegin', markup)
     navBtn.innerHTML += markup
   }
-  // topNav.insertAdjacentHTML('afterbegin', markup)
 }
 
 function createNavMarkup(blog) {
