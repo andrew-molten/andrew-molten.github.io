@@ -243,12 +243,10 @@ button {
   align-items: baseline;
   display: inline-block;
 }
-
-.home-page-icon-img {
+.home-page-icon img {
   width: 5%;
 }
-
-.home-page-icon-text {
+.home-page-icon p {
   display: inline-block;
   transform: translateY(-60%);
   color: #fdf8f1;
@@ -327,8 +325,12 @@ a.nav-heading {
   }
 
   #bottom-nav {
-    bottom: 0.25em;
+    bottom: 0.35em;
     right: 0.5em;
+  }
+
+  .home-page-icon img {
+    width: 9%;
   }
 
   .container {
