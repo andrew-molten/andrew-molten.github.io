@@ -1,59 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////
-//////////////////// HIDE OR SHOW BLOG POST IMAGES ///////////////////////////
+///////////////////////// BLOG LINKS OBJECT //////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-
-const coreBlogPosts = document.getElementById('core-blog-posts')
-const techBlogPosts = document.getElementById('tech-blog-posts')
-const templateBlogPosts = document.getElementById('templates-blog-posts')
-const hideTechBtn = document.getElementById('hide-tech-images')
-const hideCoreBtn = document.getElementById('hide-core-images')
-
-hideTechBtn.addEventListener('click', hideCoreOrTechImages)
-hideCoreBtn.addEventListener('click', hideCoreOrTechImages)
-
-function hideCoreOrTechImages(e) {
-  e.target.id.slice(5, 9) == 'core'
-    ? hideBlogPostImages(coreBlogPosts)
-    : hideBlogPostImages(techBlogPosts)
-}
-
-function hideBlogPostImages(posts) {
-  for (Element of posts.children) {
-    Element.firstElementChild.children[0].classList.toggle('hide-image')
-    Element.firstElementChild.children[2].classList.toggle('br-1em')
-  }
-}
-
-// get pathname
-// console.log(window.location.pathname)
-
-//////////////////////////////////////////////////////////////////////////////
-// /////////////////// CREATE BLOG-LINK CARDS //////////////////
-//////////////////////////////////////////////////////////////////////////////
-
-function createBlogLinkMarkup(blog) {
-  const title = blog.title
-  const link = blog.link
-  const imageLink = blog.imageLink
-
-  return `<div class="blog-link-card">
-  <a href="${link}">
-    <img
-      src="${imageLink}"
-      class="blog-link-img"
-    />
-    <br />
-    <div class="blog-card-bg">
-      <img
-        src="images/sea-edge.png"
-        class="sea-edge"
-        alt="abstract colorful triangles"
-      />
-      <p class="blog-link-name">${title}</p>
-    </div>
-  </a>
-</div>`
-}
 
 const blogLinks = {
   tech: {
@@ -109,7 +56,44 @@ const blogLinks = {
   },
 }
 
-// go through object to create blog cards
+//////////////////////////////////////////////////////////////////////////////
+//////////////////// HIDE OR SHOW BLOG POST IMAGES ///////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+const coreBlogPosts = document.getElementById('core-blog-posts')
+const techBlogPosts = document.getElementById('tech-blog-posts')
+const templateBlogPosts = document.getElementById('templates-blog-posts')
+const hideTechBtn = document.getElementById('hide-tech-images')
+const hideCoreBtn = document.getElementById('hide-core-images')
+
+// //////////////// INDEX EVENT LISTENERS /////////////////////////
+
+function checkIfIndex() {
+  return window.location.pathname == '/'
+}
+
+if (checkIfIndex()) {
+  hideTechBtn.addEventListener('click', hideCoreOrTechImages)
+  hideCoreBtn.addEventListener('click', hideCoreOrTechImages)
+}
+
+function hideCoreOrTechImages(e) {
+  e.target.id.slice(5, 9) == 'core'
+    ? hideBlogPostImages(coreBlogPosts)
+    : hideBlogPostImages(techBlogPosts)
+}
+
+function hideBlogPostImages(posts) {
+  for (Element of posts.children) {
+    Element.firstElementChild.children[0].classList.toggle('hide-image')
+    Element.firstElementChild.children[2].classList.toggle('br-1em')
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////
+// /////////////////// CREATE BLOG-LINK CARDS //////////////////
+//////////////////////////////////////////////////////////////////////////////
+
 function generateBlogLinkCards(object, div) {
   for (key of Object.keys(object)) {
     const markup = createBlogLinkMarkup(object[key])
@@ -117,24 +101,60 @@ function generateBlogLinkCards(object, div) {
   }
 }
 
+function createBlogLinkMarkup(blog) {
+  const title = blog.title
+  const link = blog.link
+  const imageLink = blog.imageLink
+
+  return `<div class="blog-link-card">
+  <a href="${link}">
+    <img
+      src="${imageLink}"
+      class="blog-link-img"
+    />
+    <br />
+    <div class="blog-card-bg">
+      <img
+        src="images/sea-edge.png"
+        class="sea-edge"
+        alt="abstract colorful triangles"
+      />
+      <p class="blog-link-name">${title}</p>
+    </div>
+  </a>
+</div>`
+}
+
 //////////////////////////////////////////////////////////////////////////////
 // /////////////////////////// NAV ////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
 const topNav = document.getElementById('topnav')
+const bottomNav = document.getElementById('bottom-nav')
 const header = document.querySelector('.heading-container')
-topNav.addEventListener('click', openNavMenu)
+const navBtn = document.querySelector('.nav-btn')
+// checkIfIndex()
+//   ? topNav.addEventListener('click', openNavMenu)
+//   : bottomNav.addEventListener('click', openNavMenu)
+navBtn.addEventListener('click', openNavMenu)
 
 // Next step is to add this to all the other pages, and the template.
+// Figure out why bottom-nav is appearing half way up the page
 
 function openNavMenu() {
-  topNav.classList.toggle('topnav-clicked')
-  topNav.classList.contains('topnav-clicked')
+  navBtn.classList.toggle('navbtn-clicked')
+  navBtn.classList.contains('navbtn-clicked')
     ? generateNavMenuMarkUp()
-    : (topNav.innerHTML = '<p id="quick-find">Posts</p>')
+    : (navBtn.innerHTML = '<p id="nav-btn-p">Posts</p>')
 }
 
 function generateNavMenuMarkUp() {
+  // const indexPostOrder = ['tech', 'core', 'templates']
+  // checkIfIndex() ? '' : indexPostOrder.reverse()
+  // for (subject of indexPostOrder) {
+  //   generateBlogPostList(subject)
+  // }
+
   generateBlogPostList('tech')
   generateBlogPostList('core')
   generateBlogPostList('templates')
@@ -142,11 +162,19 @@ function generateNavMenuMarkUp() {
 
 function generateBlogPostList(subject) {
   const label = subject[0].toUpperCase() + subject.slice(1)
-  topNav.innerHTML += `<br/><a class="nav-heading">${label}<a>`
+  // let markup = `<br/><a class="nav-heading">${label}<a>`
+  navBtn.innerHTML += `<br/><a class="nav-heading">${label}<a>`
+  // topNav.insertAdjacentHTML(
+  //   'afterbegin',
+  //   `<br/><a class="nav-heading">${label}<a>`
+  // )
   for (key of Object.keys(blogLinks[subject])) {
     const markup = createNavMarkup(blogLinks[subject][key])
-    topNav.innerHTML += markup
+    // markup += title
+    // topNav.insertAdjacentHTML('afterbegin', markup)
+    navBtn.innerHTML += markup
   }
+  // topNav.insertAdjacentHTML('afterbegin', markup)
 }
 
 function createNavMarkup(blog) {
@@ -156,9 +184,11 @@ function createNavMarkup(blog) {
 }
 
 function init() {
-  generateBlogLinkCards(blogLinks.tech, techBlogPosts)
-  generateBlogLinkCards(blogLinks.core, coreBlogPosts)
-  generateBlogLinkCards(blogLinks.templates, templateBlogPosts)
+  if (checkIfIndex()) {
+    generateBlogLinkCards(blogLinks.tech, techBlogPosts)
+    generateBlogLinkCards(blogLinks.core, coreBlogPosts)
+    generateBlogLinkCards(blogLinks.templates, templateBlogPosts)
+  }
 }
 
 init()
