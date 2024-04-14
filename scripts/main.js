@@ -69,7 +69,9 @@ const hideCoreBtn = document.getElementById('hide-core-images')
 // //////////////// INDEX EVENT LISTENERS /////////////////////////
 
 function checkIfIndex() {
-  return window.location.pathname == '/'
+  return (
+    window.location.pathname == '/' || window.location.pathname == '/index.html'
+  )
 }
 
 if (checkIfIndex()) {
@@ -154,7 +156,7 @@ function generateNavMenuMarkUp() {
   // for (subject of indexPostOrder) {
   //   generateBlogPostList(subject)
   // }
-
+  navBtn.innerHTML += `<br/><a href="/" class="nav-home-link">Home<a>`
   generateBlogPostList('tech')
   generateBlogPostList('core')
   generateBlogPostList('templates')
@@ -163,7 +165,7 @@ function generateNavMenuMarkUp() {
 function generateBlogPostList(subject) {
   const label = subject[0].toUpperCase() + subject.slice(1)
   // let markup = `<br/><a class="nav-heading">${label}<a>`
-  navBtn.innerHTML += `<br/><a class="nav-heading">${label}<a>`
+  navBtn.innerHTML += `<br/><br/><a class="nav-heading">${label}<a>`
   // topNav.insertAdjacentHTML(
   //   'afterbegin',
   //   `<br/><a class="nav-heading">${label}<a>`

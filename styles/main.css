@@ -301,6 +301,11 @@ button {
   right: 1em;
 }
 
+a.nav-home-link {
+  color: #079496;
+  font-weight: bold;
+}
+
 a.nav-heading {
   color: #880505;
   font-weight: bold;
