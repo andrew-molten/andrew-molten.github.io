@@ -46,6 +46,10 @@ const blogLinks = {
       link: '/blog/core/te-whare-tapa-wha.html',
       imageLink: '/images/core/te-whare-tapa-wha/te-whare-tapa-wha-link.jpg',
     },
+    5: {
+      title: 'Foundations reflections',
+      link: '/blog/core/foundations-reflection.html',
+    },
   },
   templates: {
     0: {
