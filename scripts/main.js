@@ -49,6 +49,7 @@ const blogLinks = {
     5: {
       title: 'Foundations reflections',
       link: '/blog/core/foundations-reflection.html',
+      imageLink: '/images/index/blog-links/foundation-reflection.jpeg',
     },
   },
   templates: {
