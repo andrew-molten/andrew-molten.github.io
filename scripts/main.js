@@ -140,14 +140,24 @@ const topNav = document.getElementById('topnav')
 const bottomNav = document.getElementById('bottom-nav')
 const header = document.querySelector('.heading-container')
 const navBtn = document.querySelector('.nav-btn')
+const container = document.getElementById('main-container')
+
+container.addEventListener('click', closeNavMenu)
 
 navBtn.addEventListener('click', openNavMenu)
 
 function openNavMenu() {
-  navBtn.classList.toggle('navbtn-clicked')
-  navBtn.classList.contains('navbtn-clicked')
-    ? generateNavMenuMarkUp()
-    : (navBtn.innerHTML = '<p id="nav-btn-p">Posts</p>')
+  if (!navBtn.classList.contains('navbtn-clicked')) {
+    generateNavMenuMarkUp()
+    navBtn.classList.toggle('navbtn-clicked')
+  } else closeNavMenu()
+}
+
+function closeNavMenu() {
+  if (navBtn.classList.contains('navbtn-clicked')) {
+    navBtn.innerHTML = '<p id="nav-btn-p">Posts</p>'
+    navBtn.classList.toggle('navbtn-clicked')
+  }
 }
 
 function generateNavMenuMarkUp() {
