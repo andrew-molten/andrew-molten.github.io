@@ -69,6 +69,12 @@ button {
   }
 } */
 
+.purple-blue-heading {
+  background: linear-gradient(45deg, #d400ff -15%, #0a26ed, aqua 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .p-link {
   color: rgb(0, 72, 255);
 }
